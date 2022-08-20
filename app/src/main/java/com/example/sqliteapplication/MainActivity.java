@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText name, contact, dob;
+    EditText name, rollNumber, age;
     Button insert, update, delete, view;
     DBHelper DB;
 
@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         name = findViewById(R.id.name);
-        contact = findViewById(R.id.contact);
-        dob = findViewById(R.id.dob);
+        rollNumber = findViewById(R.id.rollNumber);
+        age = findViewById(R.id.age);
         
         insert = findViewById(R.id.btnInsert);
         update = findViewById(R.id.btnUpdate);
@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String nameText = name.getText().toString();
-                String contactText = contact.getText().toString();
-                String dobText = dob.getText().toString();
+                String contactText = rollNumber.getText().toString();
+                String dobText = age.getText().toString();
 
                 Boolean checkInsertData = DB.insertUserData(nameText, contactText, dobText);
 
@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String nameText = name.getText().toString();
-                String contactText = contact.getText().toString();
-                String dobText = dob.getText().toString();
+                String contactText = rollNumber.getText().toString();
+                String dobText = age.getText().toString();
 
                 Boolean checkUpdateData = DB.updateUserData(nameText, contactText, dobText);
 
@@ -94,14 +94,14 @@ public class MainActivity extends AppCompatActivity {
                 }
                 StringBuffer buffer = new StringBuffer();
                 while (res.moveToNext()) {
-                    buffer.append("Name :" + res.getString(0) + "\n");
-                    buffer.append("Contact :" + res.getString(1) + "\n");
-                    buffer.append("Date of Birth :" + res.getString(2) + "\n\n");
+                    buffer.append("Name: " + res.getString(0) + "\n");
+                    buffer.append("Contact: " + res.getString(1) + "\n");
+                    buffer.append("Date of Birth: " + res.getString(2) + "\n\n");
                 }
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setCancelable(true);
-                builder.setTitle("User Entries");
+                builder.setTitle("Student Entries");
                 builder.setMessage(buffer.toString());
                 builder.show();
             }

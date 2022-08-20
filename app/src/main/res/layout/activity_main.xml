@@ -11,7 +11,7 @@
         android:id="@+id/texttitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Please enter the details below!"
+        android:text="Please enter the details below."
         android:textSize="24dp"
         android:layout_marginTop="20dp"
          />
@@ -26,21 +26,21 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/contact"
+        android:id="@+id/rollNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Contact"
+        android:hint="Roll Number"
         android:textSize="24dp"
         android:layout_below="@+id/name"
-        android:inputType="number" />
+        android:inputType="text" />
 
     <EditText
-        android:id="@+id/dob"
+        android:id="@+id/age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Date of Birth"
+        android:hint="Age"
         android:textSize="24dp"
-        android:layout_below="@+id/contact"
+        android:layout_below="@+id/rollNumber"
         android:inputType="number" />
 
     <Button
@@ -48,16 +48,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24dp"
-        android:text="Insert New Data"
+        android:text="Insert Student"
         android:layout_marginTop="30dp"
-        android:layout_below="@+id/dob" />
+        android:layout_below="@+id/age" />
 
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24dp"
-        android:text="Update Data"
+        android:text="Update Student"
         android:layout_below="@+id/btnInsert" />
 
     <Button
@@ -65,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24dp"
-        android:text="Delete Data"
+        android:text="Delete Student"
         android:layout_below="@+id/btnUpdate" />
 
     <Button
@@ -73,7 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24dp"
-        android:text="View Data"
+        android:text="View Students"
         android:layout_below="@+id/btnDelete" />
 
 </RelativeLayout>
